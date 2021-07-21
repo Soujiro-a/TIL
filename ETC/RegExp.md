@@ -83,4 +83,42 @@ str.replace(searchD, "d"); // 'depth'
 // 대소문자를 구분하고, 일치하지 않으면 -1을 반환함.
 ```
 
-(아직 작성중이며, 틈틈이 수정할 예정)
+## flag
+
+추가적인 검색 옵션의 역할을 함. 순서에 구분이 없고, 각자 사용하거나 같이 사용하는 것 모두 가능함.
+
+- i : 대소문자를 구분하지 않음.
+
+```js
+let searchDd = /D/i;
+let searchD = /D/;
+"depth".match(searchDd); // ['d'];
+"depth".match(searchD); // null
+
+// 대소문자를 구분하지 않고 해당하는 문자(열)를 찾아 반환함.
+```
+
+- g : 검색된 모든 결과를 반환함.
+
+```js
+let globalSearchA = /A/g;
+let searchA = /A/;
+
+"AbcaA".match(globalSearchA); //['A','A']
+"AbcdA".match(searchA); //['A']
+
+// g가 없을 경우에는 첫번째 검색 결과만 반환함.
+```
+
+- m : 여러 행을 검색함.
+
+```js
+let str = `
+1 : Abcd
+2 : ABcd
+3 : ABCd
+4 : ABCD
+`;
+str.match(/A/gm); //['A','A','A','A'] 4개의 행을 검색하여 모든 A를 반환함.
+str.match(/A/m); //['A'] 4개의 행을 검색하지만, flag g가 빠져있어서 검색 대상을 찾는 순간 검색을 멈추기때문에 첫 행의 ['A']만 반환함.
+```
