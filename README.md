@@ -18,6 +18,8 @@
 ### Network
 
 - [HTTPS](https://github.com/Soujiro-a/TIL/blob/main/Network/HTTPS.md)
+- [Internet Protocol](https://github.com/Soujiro-a/TIL/blob/main/Network/Internet%20Protocol.md)
+- [TCP/UDP](https://github.com/Soujiro-a/TIL/blob/main/Network/TCP%2BUDP.md)
 - [Hash+Salt](https://github.com/Soujiro-a/TIL/blob/main/Network/Hashing%2BSalt.md)
 - [Coockie+Session](https://github.com/Soujiro-a/TIL/blob/main/Network/Cookie%2BSession.md)
 - [Token](https://github.com/Soujiro-a/TIL/blob/main/Network/Token.md)
