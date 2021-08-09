@@ -23,7 +23,7 @@ A국가에 Proxy Cache Server를 두고, Origin Server에 있는 데이터를 Pr
 - Cache-Control : s-maxage
   - Proxy Cache에만 적용되면 유효기간
 - Cache-Control : no-cache
-  - 데이터는 Cache해도 되지만, 항상 Origin Server에 검증하고 사용
+  - 데이터는 Cache해도 되지만, 항상 Origin Server에 검증하고 사용.
 - Cache-Control : no-store
   - 데이터에 민감한 정보가 있으므로 저장하면 안됨 (메모리에서 사용 후 최대한 빨리 삭제)
 - Cache-Control : must-revalidate
