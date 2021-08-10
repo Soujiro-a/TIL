@@ -59,6 +59,10 @@
 
 - `git branch 새 Branch 이름`
 
+##### Branch 이름 변경
+
+- `git branch -m <기존 Branch 이름> <새 Branch 이름>`
+
 ##### 새로운 Branch 생성 후 해당 Branch로 전환
 
 - `git switch -c 새 Branch 이름`
@@ -95,6 +99,10 @@
 ##### 아직 commit 하지 않은 작업을 스택에 임시로 저장
 
 - `git stash`
+
+##### 다른 브랜치에 있는 커밋을 선택적으로 현재 브랜치에 적용
+
+- `git cherry-pick <commit_hash>`
 
 #### merge VS rebase
 
