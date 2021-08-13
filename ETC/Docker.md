@@ -48,3 +48,33 @@
 - Container의 관점에서 개발자와 사용자 커뮤니티를 중심으로 혜택을 제공하는 Docker
 
 [Docker CLI Docs](https://docs.docker.com/engine/reference/commandline/container_run/)
+
+### 자주 쓰는 CLI 명령어
+
+#### Image
+
+- `docker image pull <Registry/Repository:tag>` : Registry에서 image 혹은 Repository를 가져옴
+- `docker image ls` : image 리스트 출력
+- `docker image rm <Registry/Repository:tag>` : 해당하는 image를 삭제. 해당 image가 사용되고있는 Container가 존재한다면 Container쪽을 먼저 삭제한 뒤 image삭제가 가능함
+
+#### Container
+
+- `docker container run --name <Container이름> --rm <Registry/Repository:tag> [Command] <ARG..>`
+  - run : Container 실행
+  - Options
+    - --name : Container의 이름 할당
+    - --rm : Container를 일회성으로 실행함. Container가 중지 및 종료될 때 관련 리소스를 모두 제거
+      **-- 그외 자주 사용하는 Options --**
+    - -p : 로컬호스트와 Container의 포트를 연결. `로컬호스트포트:Container포트`와 같은 방식으로 작성함.
+  - Command : 초기 Container 실행 시 수행되는 명령어. image에 따라 다름.
+  - ARG.. : Command에 넘겨질 파라미터
+- `docker container ps -a`
+  - ps : Container 리스트 출력. Default는 실행 중인 Container
+  - -a : 종료된 Container를 포함한 모든 Container를 출력
+- `docker container rm <Container이름>` : Container를 골라 삭제함. <Container이름>위치에는 ps 명령어를 통해 확인할 수 있는 NAMES 혹은 Container ID를 사용함
+- `docker container cp <앞 폴더 경로> <뒤 폴더 경로>` : 앞 폴더 경로에 있는 파일들을 뒤 경로에 복사함.
+- `docker container commit <Container이름> <원하는 image Repository명>` : 해당Container 변경 사항을 이용해 Repository의 이름을 가진 새 Image를 만듬.
+
+#### ETC
+
+- `docker build --tag <name:tag> <폴더 경로>` : 폴더 경로에 있는 Dockerfile을 찾아 name:tag 형식으로 image 파일 생성
