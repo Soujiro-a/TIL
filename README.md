@@ -9,7 +9,7 @@
 
 ### Algorithm
 
-- [Dynamic Programming]()
+- [Dynamic Programming](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Dynamic%20Programming.md)
 - [Greddy](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Greddy.md)
 
 ### AWS
