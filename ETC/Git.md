@@ -114,3 +114,9 @@
   - Branch Base를 이동시킨다는 의미로, merge와 비슷하게 Branch 통합을 목적으로 하지만, 특정 시점으로 Branch가 가리키는 곳을 변경하는 기능을 함.
   - dev Branch를 베이스로 commit을 재정렬 함.
   - main에서 rebase를 하는건 피하는게 좋다.
+
+### fork한 Repository를 최신으로 동기화 하는데 필요한 명령어
+
+- `git remote -v` : 현재 등록되어있는 remote repository를 확인
+- `git remote add <remote명> <URL>` : URL에 해당하는 repository를 remote명에 쓰인 이름으로 remote repository에 추가함.
+- `git fetch <remote명>` : remote명에 해당하는 remote repository의 내용을 불러옴
