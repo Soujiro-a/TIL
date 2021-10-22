@@ -62,7 +62,7 @@ rs.on("error", (error) => {
 
 - chunk가 잘리는 지점이 일정하지 않았을 때, 원하는 처리를 못하는 문제가 발생할 수 있으니, 데이터 처리할 때 신경을 써줘야함
 
-### 메소드
+### pipeline을 통한 사용 예시
 
 - pipeline : transform stream을 쉽게 활용하게 도와줌
 
@@ -101,42 +101,31 @@ stream.pipeline( // 압축
 - promise를 활용한 코드 리팩토링
 
 ```js
-const fs = require('fs');
-const stream = require('stream');
-const zlib = require('zlib');
-const util = require('util');
+const fs = require("fs");
+const stream = require("stream");
+const zlib = require("zlib");
+const util = require("util");
 
 async function gzip() {
-    return util.promisify(stream.pipeline)(
-        fs.createReadStream("read"),
-  zlib.createGzip(),
-  fs.createWriteStream("transform.gz")
-    )
+  return util.promisify(stream.pipeline)(
+    fs.createReadStream("read"),
+    zlib.createGzip(),
+    fs.createWriteStream("transform.gz")
+  );
 }
 
-stream.pipeline( // 압축
-  fs.createReadStream("read"), // 입력 스트림
-  zlib.createGzip(), // 입력 받은 스트림을 transform 시킴
-  fs.createWriteStream("transform.gz") // write stream으로 보냄
-  (err) => {
-      if(err) {
-          console.error('Gzip failed', err);
-      } else{
-          console.log('Gzip succeeded');
-      }
+async function gunzip() {
+  return util.promisify(stream.pipeline)(
+    fs.createReadStream("transform.gz"),
+    zlib.createGunzip(),
+    fs.createWriteStream("transform.unzipped")
+  );
+}
 
-      stream.pipeline( // 압축해제
-  fs.createReadStream("transform.gz"),
-  zlib.createGunzip(),
-  fs.createWriteStream("transform.unzipped")
-  (_err) => {
-      if(_err) {
-          console.error('Gunzip failed', _err);
-      } else{
-          console.log('Gunzip succeeded');
-      }
-  }
-);
-  }
-);
+async function main() {
+  await gzip();
+  await gunzip();
+}
+
+main();
 ```
