@@ -1,7 +1,5 @@
 ## Stack
 
-**데이터를 순서대로 쌓는 자료구조**
-
 ### 특징
 
 - LIFO : Last In First Out
