@@ -27,6 +27,20 @@
 - [Cache](https://github.com/Soujiro-a/TIL/blob/main/Conputer%20Science/Cache.md)
 - [CSRF&XSS](https://github.com/Soujiro-a/TIL/blob/main/Computer%20Science/CSRF%26XSS.md)
 
+### Data Structure
+
+- [Graph&Tree](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Graph%26Tree.md)
+- [HashTable](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/HashTable.md)
+- [Queue](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Queue.md)
+- [Stack](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Stack.md)
+
+### Database
+
+- [RDB](https://github.com/Soujiro-a/TIL/blob/main/Database/RDB.md)
+- [NoSQL](https://github.com/Soujiro-a/TIL/blob/main/Database/NoSQL.md)
+- [Index](https://github.com/Soujiro-a/TIL/blob/main/Database/Index.md)
+- [Query](https://github.com/Soujiro-a/TIL/blob/main/Database/Query.md)
+
 ### Network
 
 - [HTTP](https://github.com/Soujiro-a/TIL/blob/main/Network/HTTP.md)
@@ -48,9 +62,15 @@
 - [Scope](https://github.com/Soujiro-a/TIL/blob/main/JavaScript/scope.md)
 - [Spread Syntax](https://github.com/Soujiro-a/TIL/blob/main/JavaScript/SpreadSyntax.md)
 - [Optional Chaining](https://github.com/Soujiro-a/TIL/blob/main/JavaScript/OptionalChaining.md)
+- [OOP](https://github.com/Soujiro-a/TIL/blob/main/JavaScript/OOP.md)
+
+### NodeJS
+
+- [Stream](https://github.com/Soujiro-a/TIL/blob/main/NodeJS/Stream.md)
 
 ### ETC
 
 - [정규표현식 정리](https://github.com/Soujiro-a/TIL/blob/main/ETC/RegExp.md)
 - [Git 정리](https://github.com/Soujiro-a/TIL/blob/main/ETC/Git.md)
 - [Docker](https://github.com/Soujiro-a/TIL/blob/main/ETC/Docker.md)
+- [Deploy](https://github.com/Soujiro-a/TIL/blob/main/ETC/Deploy.md)
