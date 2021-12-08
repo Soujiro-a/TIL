@@ -40,6 +40,31 @@ class Queue {
 
     return result;
   }
+
+  // 가장 앞 원소를 반환(Queue에서 제거하진 않음)
+  front() {
+    return this.storage[this.front];
+  }
+
+  // Queue가 비어있는지 아닌지를 판단
+  isEmpty() {
+    return this.storage.length === 0;
+  }
+
+  // Queue의 길이를 반환
+  size() {
+    return this.storage.length;
+  }
+
+  // Queue내의 모든 원소를 제거
+  clear() {
+    this.storage = [];
+  }
+
+  // Queue의 내용물들을 출력
+  print() {
+    console.log(this.storage.toString());
+  }
 }
 ```
 
@@ -53,3 +78,45 @@ class Queue {
 
 - 우선순위가 같은 작업 예약
 - 프린터의 출력 처리
+
+## Priority Queue (우선순위 큐)
+
+- 기존 Queue와 원소가 우선순위에 따라 추가되고 삭제되는 점이 다름
+
+### 구현
+
+- 우선순위를 결정하여 원소를 정확한 위치에 추가하는 부분만 작성
+- 작성한 부분 이외의 메소드들은 기존 Queue와 동일함
+
+```js
+class PriorityQueue() {
+  constructor() {
+    this.arr = [];
+  }
+
+  class QueueElement(element, priority) {
+    this.element = element;
+    this.priority = priority;
+  }
+
+  enqueue(element, priority) {
+    const queueElement = new QueueElement(element, priority);
+
+    if(this.arr.isEmpty()) {
+      this.arr.push(queueElement);
+    } else {
+      let added = false;
+      for(let i = 0; i<this.arr.length; i++) {
+        if(queueElement.priority < this.arr[i].priority) {
+          this.arr.splice(i,0,queueElement);
+          added=true;
+          break;
+        }
+      }
+      if(!added) {
+        this.arr.push(queueElement);
+      }
+    }
+  }
+}
+```
