@@ -36,6 +36,31 @@ class Stack {
 
     return result;
   }
+
+  // 꼭대기에 있는 원소 반환 (마지막에 추가된 원소 반환)
+  peek() {
+    return this.arr[this.arr.length - 1];
+  }
+
+  // 스택이 비어있는지 아닌지를 판단
+  isEmpty() {
+    return this.arr.length === 0;
+  }
+
+  // 스택의 길이를 반환
+  size() {
+    return this.arr.length;
+  }
+
+  // 스택내의 모든 원소를 제거
+  clear() {
+    this.arr = [];
+  }
+
+  // 스택의 내용물들을 출력
+  print() {
+    console.log(this.items.toString());
+  }
 }
 ```
 
