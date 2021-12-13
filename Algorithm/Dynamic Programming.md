@@ -64,3 +64,64 @@ function fib(n) {
   return fibNum[n];
 }
 ```
+
+### 그 외의 예시
+
+- 최소 동전 교환 문제
+  - 주어진 금액을 특정 금액의 동전(10, 50, 100, 500 등)으로 바꿔줄 때, 필요한 동전의 최소 개수를 찾는 문제
+    ex) 780원을 동전으로 바꿀 경우
+    - 10원 : 3개
+    - 50원 : 1개
+    - 100원 : 2개
+    - 500원 : 1개
+  - 단, 동전 종류가 오름차순 정렬을 해줘야 계산하기 수월함
+
+```js
+function minCoinChange(coins) {
+  let coins = coins; // 동전 종류들
+  let cache = {}; // 중복 계산을 최대한 피하기위한 객체
+
+  this.makeChange = function (amount) {
+    const me = this;
+
+    if (!amount) {
+      // 금액이 음수라면 빈 배열 반환
+      return [];
+    }
+
+    // 해당 금액에 대해 이미 캐싱이 되어있는 상태라면 캐싱되어있는 값을 반환
+    if (cache[amount]) {
+      return cache[amount];
+    }
+
+    //
+    let min = [];
+
+    // newMin : 동전의 최소 개수
+    // newAmount : 유효한 최소 금액
+    let newMin, newAmount;
+
+    for (let i = 0; i < coins.length; i++) {
+      const coin = coins[i];
+      newAmount = amount - coin; // 각 동전에 대한 newAmount를 계산
+
+      //  유효한 금액에 대해 다시 재귀호출을 통하여 결과를 담음
+      if (newAmount >= 0) {
+        newMin = me.makeChange(newAmount);
+      }
+
+      if (
+        newAmount >= 0 && // newAmount가 유효한 값인가
+        // newMin이 최적값으로 도출 됐는지
+        (newMin.length < min.length - 1 || !min.length) &&
+        // newMin, newAmount 모두 유효 값인지
+        (newMin.length || !newAmount)
+      ) {
+        // 위 조건들을 모두 충족한다면, 이전보다 더 나은 결과를 얻었다는 반증
+        min = [coin].concat(newMin);
+      }
+    }
+    return (cache[amount] = min); // 최종 결과를 반환
+  };
+}
+```

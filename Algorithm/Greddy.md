@@ -13,8 +13,29 @@
 2. 적절성 검사 : 선택된 해가 문제의 조건을 만족하는지 검사
 3. 해답 검사 : 처음 받은 문제가 해결됐는지를 검사하고, 해결되지 않았다면 선택 절차부터 다시 반복.
 
-#### 예시 : Fractional knapsack problem(분할가능 배낭 문제)
+### 예시
 
-문제 : 한 여행가가 가지고 가는 배낭에 담을 수 있는 무게의 최대값이 정해져있고, 일정 가치, 무게가 있는 짐들을 배낭에 넣을 때 가치의 합이 최대가 되도록 짐을 고르는 방법
+- 최소 동전 교환 문제
+  - [동적 프로그래밍](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Dynamic%20Programming.md) 방식보다 단순하게 구현할 수 있음
 
-해결 방법 : 단위 무게 당 값어치가 가장 큰 짐부터 순서대로 넣음
+```js
+function MinCoinChange(coins) {
+  let coins = coins;
+
+  this.makeChange = function (amount) {
+    const change = [];
+    let total = 0;
+
+    for (let i = coins.length; i >= 0; i--) {
+      let coin = coins[i];
+      // 각 동전에 대해 금액이 큰것부터 작은 것 순으로 total에 더해감
+      // 현재 동전 금액으로 더 이상 추가할 수 없다면 그 다음으로 큰 금액의 동전을 찾아가는 방식
+      while (total + coin <= amount) {
+        change.push(coin);
+        total += coin;
+      }
+    }
+    return change;
+  };
+}
+```
