@@ -55,3 +55,18 @@ print(d) # [6,5,4,8,2,[12,34]]
 d.extend(ex)
 print(d) # [6,5,4,8,2,[12,34],12,34]
 ```
+
+### List Comprehension
+
+- 예시) 1~100까지 배열을 만드는 방법
+
+```py
+# 일반적인 방법
+numbers = []
+
+for n in range(1,101):
+    numbers.append(n)
+
+# List Comprehension
+numbers2 = [x for x in range(1,101)]
+```
