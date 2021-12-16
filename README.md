@@ -1,9 +1,9 @@
 # Today I Learned (TIL)
 
-> 1. 배우거나, 알게 됐거나, 학습한 내용들을 정리해두는 레포지토리.
-> 2. 하나하나 직접 작성하며, 개념적인 부분 이외에 이해하지 못한 부분은 쓰지 않기.
+> 1. 배우거나, 알게 됐거나, 학습한 내용들을 정리해두는 레포지토리
+> 2. 하나하나 직접 작성하며, 외우진 못하더라도 작성할 때 만큼은 이해하면서 작성하도록 노력하기
 > 3. 항상 부족하다는 생각을 가지고, 더 좋은 자료를 찾거나, 개념을 익히면 수정하기
-> 4. 카테고리는 최대한 세분화하기.
+> 4. 카테고리는 최대한 세분화하기
 
 ---
 
@@ -11,6 +11,8 @@
 
 - [Dynamic Programming](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Dynamic%20Programming.md)
 - [Greddy](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Greddy.md)
+- [Recursion](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Recursion.md)
+- [Sort&Search](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Sort%26Search.md)
 
 ### AWS
 
@@ -29,10 +31,14 @@
 
 ### Data Structure
 
-- [Graph&Tree](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Graph%26Tree.md)
 - [HashTable](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/HashTable.md)
 - [Queue](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Queue.md)
 - [Stack](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Stack.md)
+- [Set](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Set.md)
+- [Tree](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Tree.md)
+- [LinkedList](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/LinkedList.md)
+- [Graph](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Graph.md)
+- [Dictionary](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Dictionary.md)
 
 ### Database
 
@@ -40,6 +46,7 @@
 - [NoSQL](https://github.com/Soujiro-a/TIL/blob/main/Database/NoSQL.md)
 - [Index](https://github.com/Soujiro-a/TIL/blob/main/Database/Index.md)
 - [Query](https://github.com/Soujiro-a/TIL/blob/main/Database/Query.md)
+- [MongoDB](https://github.com/Soujiro-a/TIL/blob/main/Database/mongoDB.md)
 
 ### Network
 
@@ -66,6 +73,7 @@
 
 ### NodeJS
 
+- [NodeJS](https://github.com/Soujiro-a/TIL/blob/main/NodeJS/NodeJS.md)
 - [Stream](https://github.com/Soujiro-a/TIL/blob/main/NodeJS/Stream.md)
 
 ### ETC
