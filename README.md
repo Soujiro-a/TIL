@@ -5,6 +5,8 @@
 > 3. 항상 부족하다는 생각을 가지고, 더 좋은 자료를 찾거나, 개념을 익히면 수정하기
 > 4. 카테고리는 최대한 세분화하기
 
+> 추가. 말로 설명하는 연습을 꼭 해보기
+
 ---
 
 ### Algorithm
@@ -71,9 +73,8 @@
 - [Optional Chaining](https://github.com/Soujiro-a/TIL/blob/main/JavaScript/OptionalChaining.md)
 - [OOP](https://github.com/Soujiro-a/TIL/blob/main/JavaScript/OOP.md)
 
-### NodeJS
+### [NodeJS](https://github.com/Soujiro-a/TIL/tree/main/NodeJS)
 
-- [NodeJS](https://github.com/Soujiro-a/TIL/blob/main/NodeJS/NodeJS.md)
 - [Stream](https://github.com/Soujiro-a/TIL/blob/main/NodeJS/Stream.md)
 
 ### ETC
