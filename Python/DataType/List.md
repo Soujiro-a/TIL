@@ -19,7 +19,7 @@ print(c[-1][0]) # apple
 
 # 슬라이싱
 print(a[0:2]) # [1,2]
-print(c[2][1:3]) # ["apple", "banana", "kiwi"]
+print(c[2][1:3]) # ["banana", "kiwi"]
 
 # 연산
 print(a+c) # [1,2,3,4,1,10,["apple", "banana", "kiwi"]]
