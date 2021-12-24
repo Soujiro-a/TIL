@@ -5,10 +5,10 @@
 - int : 정수
 - float : 실수
 - complex : 복소수
-- dictionary : 사전
-- list : 리스트(시퀀스)
-- tuple : 튜플(시퀀스)
-- set : 집합
+- [dictionary](https://github.com/Soujiro-a/TIL/blob/main/Python/DataType/Dictionary.md) : 사전
+- [list](https://github.com/Soujiro-a/TIL/blob/main/Python/DataType/List.md) : 리스트(시퀀스)
+- [tuple](https://github.com/Soujiro-a/TIL/blob/main/Python/DataType/Tuple.md) : 튜플(시퀀스)
+- [set](https://github.com/Soujiro-a/TIL/blob/main/Python/DataType/Set.md) : 집합
 - \*시퀀스 : 순서가 있다는 의미
 
 ### 숫자형 연산자
