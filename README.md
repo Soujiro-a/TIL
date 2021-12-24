@@ -5,7 +5,7 @@
 > 3. 항상 부족하다는 생각을 가지고, 더 좋은 자료를 찾거나, 개념을 익히면 수정하기
 > 4. 카테고리는 최대한 세분화하기
 
-> 추가. 말로 설명하는 연습을 꼭 해보기
+> 추가. 개념들은 말로 설명하는 연습을 꼭 해보기
 
 ---
 
@@ -76,6 +76,17 @@
 ### [NodeJS](https://github.com/Soujiro-a/TIL/tree/main/NodeJS)
 
 - [Stream](https://github.com/Soujiro-a/TIL/blob/main/NodeJS/Stream.md)
+
+### Python
+
+- [DataType](https://github.com/Soujiro-a/TIL/tree/main/Python/DataType)
+- [Class](https://github.com/Soujiro-a/TIL/blob/main/Python/Class.md)
+- [Conditional](https://github.com/Soujiro-a/TIL/blob/main/Python/Conditional.md)
+- [Exception](https://github.com/Soujiro-a/TIL/blob/main/Python/Exception.md)
+- [FileIO](https://github.com/Soujiro-a/TIL/blob/main/Python/FileIO.md)
+- [Module&Package](https://github.com/Soujiro-a/TIL/blob/main/Python/Module%26Package.md)
+- [Print](https://github.com/Soujiro-a/TIL/blob/main/Python/Print.md)
+- [Loop](https://github.com/Soujiro-a/TIL/blob/main/Python/loop.md)
 
 ### ETC
 
