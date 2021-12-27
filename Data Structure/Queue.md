@@ -2,10 +2,14 @@
 
 ### 특징
 
-- FIFO : First In First Out
-- 배열을 사용할 때와는 달리 특정 인덱스에 접근하지 않는다.
+- 가장 먼저 넣은 데이터를 가장 먼저 꺼낼 수 있는 구조
+  - ex) 줄을 서서 차례로 입장하는 것
+  - ex) 톨게이트에 가장 먼저 들어간 차량이 가장 빨리 나오는 것
+- FIFO : First In First Out, LILO : Last In Last Out (<=> [Stack](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Stack.md))
+- 배열을 사용할 때와는 달리, 특정 인덱스에 접근해서 사용하지 않는다.
 - 데이터를 추가하거나 삭제하는 연산만 가능하다
-- 최상위의 항목을 제거하더라도 원소들을 하나씩 옆으로 밀어줄 필요는 없다.
+  - Enqueue : Queue에 데이터를 넣는 기능
+  - Dequeue : Queue에서 데이터를 꺼내는 기능
 
 ### 구현
 
