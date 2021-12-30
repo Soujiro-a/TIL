@@ -50,6 +50,8 @@
    - 추가 메모리 공간을 사용하지 않고, HashTable 배열의 빈 공간을 사용하는 방법
    - Separating Chaining에 비해 메모리 사용이 적음
    - 방법은 Linear Probing, Quadratic Probing, Double Hashing 등이 있다고 함
+     - Linear Probing : Hash 충돌이 일어나면, 충돌이 일어난 위치의 다음 Key부터 맨 처음 나오는 빈 공간에 저장하는 방법
+       - 저장 공간의 활용도를 높일 수 있음
 3. Resizing
    - 저장 공간이 일정 수준에 도달했을 경우에 Resizing을 함
      - Separating Chaining의 경우에는 성능 향상이 목적
