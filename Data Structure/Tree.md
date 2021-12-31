@@ -1,12 +1,10 @@
 ## Tree
 
-Node로 이루어진 자료구조
+Node와 Edge(Branch)로 이루어진 자료구조
 
 - Tree는 하나의 루트 Node를 가짐
 - 루트 Node는 0개 이상의 자식 Node를 가지고 있음
 - 각 자식 Node 또한 0개 이상의 자식 Node를 가지고 있음
-
-Node들과 Node들을 연결하는 Edge들로 우성되어 있음
 
 - Node들이 순서에 따른 나열 가능성도 있음
 - 각 Node들은 반드시 부모 Node로 연결되어있진 않음
@@ -15,6 +13,17 @@ Node들과 Node들을 연결하는 Edge들로 우성되어 있음
 비선형 자료구조로 계층 관계를 표현
 
 - ex) 디렉터리 구조, 사내 조직도
+
+### 용어
+
+- Node : Tree에서 데이터를 저장하는 기본 요소(연결된 노드에 대한 Edge 정보를 포함)
+- Root Node : 트리 최상단에 있는 노드
+- Level : 최상단 노드(Root Node)를 Level0 이라고 하였을 때, 하위 Edge로 연결된 노드의 깊이를 나타냄
+- Parent Node : 어떤 노드의 하위 레벨에 연결된 노드
+- Child Node : 어떤 노드의 상위 레벨에 연결된 노드
+- Leaf Node(Terminal Node) : Child Node가 하나도 없는 노드
+- Sibling(Brother Node) : 동일한 Parent Node를 가진 노드
+- Depth : Tree에서 노드가 가질 수 있는 최대 Level
 
 ### 특징
 
@@ -40,6 +49,23 @@ Node들과 Node들을 연결하는 Edge들로 우성되어 있음
 - 노드 개수에 따라 한쪽으로 깊게 치우칠 수 있는 문제가 생길 수 있음
   => AVL 트리라는 대안이 있음
   \*AVL 트리 : 좌/우측 서브트리의 높이가 1이상 차이나지 않도록 조정해주는 BST의 일종
+
+### BST 삭제 방법
+
+1. Leaf Node 삭제
+
+- 삭제할 Node의 Parent Node의 edge가 삭제할 Node를 가리키지 않도록 해야함
+
+2. Child Node가 하나인 Node 삭제
+
+- 삭제할 Node의 Parent Node가 삭제할 Node의 Child Node를 가리키도록 함
+
+3. Child Node가 두 개인 Node 삭제
+
+- 삭제할 Node의 Parent Node가 삭제할 Node의 오른쪽 Child 중에서 가장 작은 값을 가리키도록 함
+  - 삭제할 Node의 오른쪽 Child 중에서 가장 작은 값을 찾는 방법
+    1. 삭제할 Node의 오른쪽 Child 선택
+    2. 1번에서 선택한 Node의 가장 왼쪽에 있는 Node를 선택
 
 ### 구현
 
@@ -180,7 +206,7 @@ function BinarySearchTree() {
       node.left = removeNode(node.left, key);
       return node;
     } else if (key > node.key) {
-      node.right - removeNode(node.right, key);
+      node.right = removeNode(node.right, key);
       return node;
     } else {
       // 자식 노드가 없는 경우
