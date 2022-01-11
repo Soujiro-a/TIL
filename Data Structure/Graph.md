@@ -18,6 +18,16 @@ Node와 Node를 연결하는 Edge(간선)을 하나로 모아 놓은 자료구�
   - 부모-자식 관계 개념이 없음
 - Cyclic(순환) 혹은 Acyclic(비순환)을 가짐
 
+### 탐색 알고리즘
+
+- 너비 우선 탐색(BFS) : 정점들과 같은 레벨에 있는 Node들을 먼저 탐색하는 방식
+  - [Queue](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Queue.md)를 활용하여 방문해야할 곳, 방문한 곳을 체크하는 방식
+- 깊이 우선 탐색(DFS) : 정점의 자식들을 먼저 탐색하는 방식
+
+  - 방문해야할 곳을 [Stack](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Stack.md), 방문한 곳을 [Queue](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Queue.md)를 사용하여 체크하는 방식
+
+- BFS, DFS 둘 다, 시간 복잡도는 Node의 수를 V, 간선의 수를 E라고 할 때 O(V+E)
+
 ### 구현
 
 - Dictionary 클래스는 [Dictionary](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Dictionary.md)에 구현 부분 참고
