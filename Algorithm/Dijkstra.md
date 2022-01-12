@@ -1,0 +1,26 @@
+## Dijkstra
+
+### 특징
+
+- [Graph](https://github.com/Soujiro-a/TIL/tree/main/Data%20Structure)를 사용하는 최단 경로 알고리즘 중 하나
+- 하나의 정점에서 다른 모든 정점 간의 최단 경로를 구함
+- 첫 정점을 기준으로 연결되어있는 정점들을 추가해가며, 최단 거리를 갱신해나감
+- [BFS](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Graph.md#%ED%83%90%EC%83%89-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)와 유사성을 띔
+
+### 로직
+
+- [우선순위 큐](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Queue.md#priority-queue-%EC%9A%B0%EC%84%A0%EC%88%9C%EC%9C%84-%ED%81%90)를 활용한 방식
+
+  - [최소 힙](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Heap.md)을 활용해서, 현재 가장 짧은 거리를 가진 노드 정보를 먼저 꺼내어 사용
+
+  1. 배열을 선언하여, 첫 정점에서 각 정점까지의 거리를 저장
+     - 초기에 첫 정점의 거리는 0, 나머지는 무한대로 저장
+     - 초기 단계에서 우선 순위 큐에는 (첫 정점, 거리 0)만 넣어놓음
+  2. 우선순위 큐에서 노드를 꺼냄
+     - 처음에는 첫 정점에 대한 정보만 저장되어있기 때문에, 해당 정보가 꺼내짐
+     - 첫 정점에 인접한 노드들에 대하여, 첫 정점에서 해당 노드로 가는 거리와 현재 배열에 저장되어있는 첫 정점에서 각 정점까지의 거리를 비교
+       - 배열에 저장되어있는 거리 > 첫 정점에서 해당 노드로 가는 거리 인 경우, 배열에 해당 노드의 거리를 업데이트
+     - 배열에 해당 노드의 거리가 업데이트 된 경우, 우선순위 큐에 넣음
+       - 결과적으로 [너비 우선 탐색](https://github.com/Soujiro-a/TIL/blob/main/Data%20Structure/Graph.md#%ED%83%90%EC%83%89-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)과 유사하게, 첫 정점에 인접한 노드들을 순차적으로 방문
+       - 만약 배열에 기록된 현재까지 발견된 가장 짧은 거리보다 더 긴 거리를 거진 (노드, 거리)의 경우에는 해당 노드와 인접한 노드간의 거리를 계산하지 않음
+  3. 2번 과저을 우선순위 큐에서 꺼낼 노드가 없을 때 까지 반복
