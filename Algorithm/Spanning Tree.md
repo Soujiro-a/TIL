@@ -18,3 +18,4 @@
 - 모든 정점을 독립적인 집합으로 만듬
 - 모든 간선을 가중치를 기준으로 정렬하고, 비용이 작은 간선부터 양 끝의 두 정점을 비교
 - 두 정점의 최상위 정점을 확인 후, 서로 다를 경우 두 정점을 연결(사이클이 생기지 않도록 하기 위함)
+- [Union-Find](https://github.com/Soujiro-a/TIL/blob/main/Algorithm/Union-Find.md) 알고리즘 사용
